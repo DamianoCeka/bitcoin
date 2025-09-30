@@ -12,7 +12,9 @@ What is ITSME Coin?
 ITSME Coin is a privacy-focused cryptocurrency based on Bitcoin Core technology. It connects to the peer-to-peer network to download and fully validate blocks and transactions. It also includes a wallet and graphical user interface, which can be optionally built.
 
 **Enhanced Privacy Features:**
+
 ITSME Coin is committed to providing users with enhanced privacy and anonymity features:
+
 - **Planned Tor Integration**: Native support for routing transactions through the Tor network to protect user IP addresses and enhance anonymity
 - **Planned CoinJoin Support**: Implementation of CoinJoin protocol to break the link between transaction inputs and outputs, making it harder to trace fund flows
 - **Future Privacy Upgrades**: Ongoing research into additional privacy technologies to ensure maximum user protection
@@ -22,22 +24,68 @@ Further information about ITSME Coin is available in the [doc folder](/doc).
 ## Privacy Roadmap
 
 ### Short-term Goals (Q1-Q2 2026)
+
 - Complete Tor network integration for all node communications
 - Implement basic CoinJoin mixing protocol
 - Add privacy-focused RPC commands
 - Develop user documentation for privacy features
 
 ### Medium-term Goals (Q3-Q4 2026)
+
 - Enhanced CoinJoin with multi-party coordination
 - Privacy metrics and analysis tools
 - Integration with privacy-focused wallets
 - Stealth address support
 
 ### Long-term Vision (2027 and beyond)
+
 - Research and potential implementation of zero-knowledge proofs
 - Cross-chain privacy bridges
 - Advanced cryptographic privacy enhancements
 - Quantum-resistant privacy features
+
+## Rewards and Incentives for Privacy Contributors
+
+ITSME Coin recognizes that privacy is a community effort. We welcome and reward contributors who help us build and strengthen our privacy features.
+
+### Bug Bounty Program
+
+We maintain an active bug bounty program for security and privacy vulnerabilities:
+
+- **Critical Privacy Vulnerabilities**: Up to 10,000 ITSME
+- **High-Severity Issues**: Up to 5,000 ITSME
+- **Medium-Severity Issues**: Up to 2,000 ITSME
+- **Low-Severity Issues**: Up to 500 ITSME
+
+All vulnerability reports should be submitted confidentially through our [SECURITY.md](SECURITY.md) process.
+
+### Development Grants
+
+We offer grants for contributors working on significant privacy enhancements:
+
+- **Major Feature Implementation**: Grants for implementing complete privacy features from our roadmap
+- **Research Contributions**: Funding for original research into privacy-enhancing technologies
+- **Documentation & Education**: Rewards for comprehensive privacy documentation and educational materials
+
+### Open Collaboration
+
+We believe in open collaboration and encourage community participation:
+
+- **Regular Community Calls**: Join our monthly privacy development meetings
+- **Mentorship Program**: Experienced developers available to guide new contributors
+- **Recognition**: Top contributors featured in release notes and project documentation
+
+### Have an Idea?
+
+We invite the community to propose innovative ideas for privacy upgrades!
+
+- **Submit Enhancement Proposals**: Open an issue with the "privacy-enhancement" label
+- **Join the Discussion**: Participate in our [Discussions](../../discussions) to share your ideas
+- **Collaborate on RFCs**: Help shape the future of ITSME Coin privacy through Request for Comments
+
+Whether you're a cryptography expert, a privacy advocate, or a developer passionate about financial freedom, your contributions are valued. Together, we can build the most privacy-respecting cryptocurrency ecosystem.
+
+For more information on how to contribute, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 License
 -------
