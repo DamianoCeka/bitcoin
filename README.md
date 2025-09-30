@@ -1,6 +1,5 @@
 ITSME Coin - Privacy-Enhanced Cryptocurrency
 =====================================
-
 https://bitcoincore.org
 
 For an immediately usable, binary version of the ITSME Coin software, see
@@ -71,21 +70,116 @@ We offer grants for contributors working on significant privacy enhancements:
 
 We believe in open collaboration and encourage community participation:
 
-- **Regular Community Calls**: Join our monthly privacy development meetings
-- **Mentorship Program**: Experienced developers available to guide new contributors
-- **Recognition**: Top contributors featured in release notes and project documentation
+- Regular Community Calls: Join our monthly privacy development meetings
+- Mentorship Program: Experienced developers available to guide new contributors
+- Recognition: Top contributors featured in release notes and project documentation
 
 ### Have an Idea?
 
 We invite the community to propose innovative ideas for privacy upgrades!
 
-- **Submit Enhancement Proposals**: Open an issue with the "privacy-enhancement" label
-- **Join the Discussion**: Participate in our [Discussions](../../discussions) to share your ideas
-- **Collaborate on RFCs**: Help shape the future of ITSME Coin privacy through Request for Comments
+- Submit Enhancement Proposals: Open an issue with the "privacy-enhancement" label
+- Join the Discussion: Participate in our [Discussions](/discussions) to share your ideas
+- Collaborate on RFCs: Help shape the future of ITSME Coin privacy through Request for Comments
 
 Whether you're a cryptography expert, a privacy advocate, or a developer passionate about financial freedom, your contributions are valued. Together, we can build the most privacy-respecting cryptocurrency ecosystem.
 
 For more information on how to contribute, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Repository Structure
+
+Understanding the repository structure is essential for effective contribution. This section outlines the fundamental folders and files, along with recommendations for keeping the repository clean and focused.
+
+### Core Folders and Files
+
+These are the essential components of the ITSME Coin repository:
+
+- **`src/`** - Contains all source code for the ITSME Coin core implementation
+  - This is where the main cryptocurrency logic, network protocol, consensus rules, and wallet functionality reside
+  - Contributors should focus their development efforts here for core features
+
+- **`doc/`** - Complete documentation for ITSME Coin
+  - Build instructions, API documentation, release notes, and technical specifications
+  - Essential reading for both users and developers
+
+- **`share/`** - Platform-specific resources
+  - Icons, desktop files, and other resources for GUI applications
+  - Important for user-facing application deployment
+
+- **`CMakeLists.txt`** - Main build configuration file
+  - Defines how the project is compiled and built
+  - Required for building the software from source
+
+- **`README.md`** - This file - project overview and quick start guide
+
+- **`CONTRIBUTING.md`** - Guidelines for contributing to the project
+
+- **`COPYING`** - MIT License terms
+
+- **`INSTALL.md`** - Installation instructions
+
+### Optional/Legacy Folders
+
+The following folders may not be necessary for all development workflows:
+
+- **`test/`** - Integration and functional tests
+  - While testing is important, extensive test suites may not be needed for all forks
+  - Consider if your project requires the full test suite
+
+- **`contrib/`** - Community contributed tools and utilities
+  - Contains various helper scripts and tools
+  - May include tools not relevant to your specific fork
+
+- **`.tx/`** - Transifex translation configuration
+  - Used for managing translations through the Transifex platform
+  - Not needed if you're not actively managing translations
+
+- **`ci/`** - Continuous Integration scripts
+  - GitHub Actions and CI/CD configurations
+  - May need customization for your specific workflow
+
+### Repository Cleanup Recommendations
+
+**For Contributors**: We encourage contributors to focus their efforts on the core functionality:
+
+- **Primary Focus Areas**: `src/`, `doc/`, `share/`, build files (`CMakeLists.txt`)
+- **Documentation**: Always update relevant documentation in `doc/` when modifying core features
+- **Testing**: While `test/` exists, focus on testing code changes in `src/` directly
+
+**Repository Maintenance Notes**:
+
+If you're maintaining your own fork and want a leaner repository:
+
+1. **Consider Manual Removal** of unused directories:
+   - If not using Transifex: Remove `.tx/`
+   - If not maintaining the full test suite: Consider removing or minimizing `test/`
+   - If not using contributed tools: Review and possibly remove `contrib/`
+
+2. **Before Removing**, consider:
+   - Do you need the CI/CD pipeline? (`.github/`, `ci/`)
+   - Will you maintain compatibility with upstream Bitcoin Core?
+   - Do you need the full test coverage for your fork?
+
+3. **Cleaning Process**:
+   ```bash
+   # Example commands (use with caution):
+   git rm -r .tx/          # Remove Transifex configuration
+   git rm -r contrib/      # Remove contributed tools
+   git commit -m "Clean up unused directories"
+   ```
+
+**Important**: Before removing any directories, ensure they're not required by your build system or dependencies. Some folders may be referenced in CMake or other configuration files.
+
+### Focus Areas for ITSME Coin
+
+For ITSME Coin specifically, contributors should concentrate on:
+
+- **Privacy features** in `src/` - Tor integration, CoinJoin implementation
+- **Privacy documentation** in `doc/` - User guides and technical specifications
+- **Core consensus** and network protocol modifications for privacy
+- **Wallet enhancements** for privacy-preserving transactions
+
+By maintaining focus on these core areas, we can build a robust privacy-focused cryptocurrency while keeping the repository manageable and contributor-friendly.
 
 License
 -------
